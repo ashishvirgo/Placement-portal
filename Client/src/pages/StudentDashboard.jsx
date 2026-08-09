@@ -20,6 +20,9 @@ import ChapterWiseSyllabusViewer from "./ChapterWiseSyllabusViewer";
 
 const StudentDashboard = () => {
   const navigate = useNavigate();
+    const [collapsed, setCollapsed] = useState(false);
+  const [activeTab, setActiveTab] = useState("test");
+  const [student, setStudent] = useState(null);
 
   const [theme, setTheme] = useState(
     localStorage.getItem("theme") || "light"
@@ -39,9 +42,6 @@ const StudentDashboard = () => {
     if (!token) navigate("/");
   }, [navigate]);
 
-  const [collapsed, setCollapsed] = useState(false);
-  const [activeTab, setActiveTab] = useState("test");
-  const [student, setStudent] = useState(null);
 
   useEffect(() => {
     const user = JSON.parse(
@@ -131,7 +131,7 @@ const StudentDashboard = () => {
       <div className="flex-1 overflow-y-auto p-5 lg:p-8">
         
         {/* Welcome Banner */}
-        <div className="relative overflow-hidden rounded-3xl bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 p-8 text-white shadow-2xl mb-8">
+        {/* <div className="relative overflow-hidden rounded-3xl bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 p-8 text-white shadow-2xl mb-8">
           
           <div className="absolute top-0 right-0 w-72 h-72 bg-white/10 rounded-full blur-3xl"></div>
 
@@ -152,10 +152,10 @@ const StudentDashboard = () => {
               <FiUser />
             </div>
           </div>
-        </div>
+        </div> */}
 
         {/* Info Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+        {/* <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
           
           <div className="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg border border-gray-100 dark:border-gray-700 hover:shadow-xl transition">
             <div className="flex items-center gap-4">
@@ -209,7 +209,7 @@ const StudentDashboard = () => {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
 
         {/* Quick Actions Header */}
         <div className="flex items-center gap-3 mb-6">

@@ -75,12 +75,12 @@ const Login = () => {
           </div>
 
           <h2 className="text-3xl font-bold leading-snug">
-            Smart Exam & Learning Portal
+            Smart Placement Prepration Portal
           </h2>
 
           <p className="mt-4 text-blue-100 text-sm">
             Secure role-based access for Students, Teachers & Admins with
-            modern online examination system.
+            modern online placement system.
           </p>
 
           {/* Features */}

@@ -31,6 +31,16 @@ const Sidebar = ({
 
   const tabs = [
     {
+      key: "profile",
+      label: "My Profile",
+      icon: <FiUser size={20} />,
+    },
+    {
+      key: "resume",
+      label: "My Resume",
+      icon: <FiUser size={20} />,
+    },
+    {
       key: "Exam-Info",
       label: "Exam Info",
       icon: <MdOutlineQuiz size={20} />,
@@ -42,7 +52,7 @@ const Sidebar = ({
     },
     {
       key: "test",
-      label: "Sample Tests",
+      label: "Mock Tests",
       icon: <MdOutlineQuiz size={20} />,
     },
     {
@@ -55,11 +65,7 @@ const Sidebar = ({
       label: "Results",
       icon: <FiBarChart2 size={20} />,
     },
-    {
-      key: "profile",
-      label: "Profile",
-      icon: <FiUser size={20} />,
-    },
+    
     {
       key: "password",
       label: "Change Password",
@@ -92,11 +98,11 @@ const Sidebar = ({
 
                 <div>
                   <h2 className="font-bold text-lg text-gray-800 dark:text-white">
-                    Student Portal
+                    Student Placement Portal
                   </h2>
 
                   <p className="text-xs text-gray-500">
-                    Online Assessment
+                    Training and Placement 
                   </p>
                 </div>
               </div>

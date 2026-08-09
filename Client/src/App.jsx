@@ -16,6 +16,10 @@ import AssignedExam from './pages/AssignedExam'
 import { LogIn } from 'lucide-react'
 import Login from './components/Login'
 import ExamInfoPage from './pages/ExamInfoPage'
+import PlacementOfficer from './pages/PlacementOfficer'
+import RecruiterDashboard from './pages/RecruiterDashboard'
+import PlacementCoordinatorDashboard from './pages/PlacementCoordinatorDashboard'
+import StudentNewDashboard from './pages/StudentNewDashboard'
 const App = () => {
   return (
     <div>
@@ -25,8 +29,12 @@ const App = () => {
         <Route path="/register" element={<Register/>}/>
         <Route path="/forgot" element={<ForgotPassword/>}/>
         <Route path="/student" element={<StudentDashboard/>} />
+        <Route path="/ourstudent" element={<StudentNewDashboard/>} />
         <Route path="/admin" element={<AdminDashboard/>}/>
         <Route path="/teacher" element={<TeacherDashboard/>}/>
+        <Route path="/tpo" element={<PlacementOfficer/>}/>
+        <Route path="/recruiter" element={<RecruiterDashboard/>}/>
+        <Route path="/placement-coordinator" element={<PlacementCoordinatorDashboard/>}/>
         <Route path="/instructions" element={<Instructions />} />
         <Route path="/exam-info" element={<ExamInfoPage />} />
         <Route path="/exam/:id" element={<Exam />} />

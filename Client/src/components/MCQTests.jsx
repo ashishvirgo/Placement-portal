@@ -74,40 +74,6 @@ const MCQTests = ({ navigate }) => {
 
   return (
     <div className="min-h-screen bg-slate-50 dark:bg-slate-950 p-6">
-      {/* HEADER */}
-      <div className="mb-8">
-        <div className="bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 rounded-3xl p-8 text-white shadow-xl">
-          <h1 className="text-3xl md:text-4xl font-bold">
-            MCQ Test Portal
-          </h1>
-
-          <p className="mt-2 text-blue-100">
-            Practice assessments and
-            improve your performance
-          </p>
-
-          <div className="flex flex-wrap gap-4 mt-6">
-            <div className="bg-white/10 backdrop-blur-md px-5 py-3 rounded-xl">
-              <p className="text-sm">
-                Available Tests
-              </p>
-              <h3 className="text-2xl font-bold">
-                {tests.length}
-              </h3>
-            </div>
-
-            <div className="bg-white/10 backdrop-blur-md px-5 py-3 rounded-xl">
-              <p className="text-sm">
-                Practice Mode
-              </p>
-              <h3 className="text-2xl font-bold">
-                Active
-              </h3>
-            </div>
-          </div>
-        </div>
-      </div>
-
       {/* LOADER */}
       {loading && (
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
