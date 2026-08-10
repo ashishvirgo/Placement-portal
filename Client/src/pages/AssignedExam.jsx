@@ -682,7 +682,7 @@ useEffect(() => {
           {q?.image && (
             <img
               src={
-                q.image.startsWith("https")
+                q.image.startsWith("http")
                   ? q.image
                   : `${back_API}/${q.image.replace(
                     /^\/+/,

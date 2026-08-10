@@ -9,9 +9,9 @@ import axios from "axios";
 import Calculator from "../components/Calculator";
 
 const API =
-  import.meta.env.VITE_BACKEND_API ||
-  "http://localhost:5002/api";
+  import.meta.env.VITE_BACKEND_API ||  "http://localhost:5002/api";
 
+const BACK_API = import.meta.env.VITE_BACK_API || "http://localhost:5002";
 const SampleExam = () => {
   const { id } = useParams();
 
@@ -741,10 +741,10 @@ const handleSubmit = () => {
             <img
               src={
                 q.image.startsWith(
-                  "http"
+                  "https"
                 )
                   ? q.image
-                  : `http://localhost:5002/${q.image.replace(
+                  : `${BACK_API}/${q.image.replace(
                       /^\/+/,
                       ""
                     )}`
@@ -794,7 +794,7 @@ const selected =
                               "http"
                             )
                               ? opt.image
-                              : `http://localhost:5002/${opt.image.replace(
+                              : `${BACK_API}/${opt.image.replace(
                                   /^\/+/,
                                   ""
                                 )}`
