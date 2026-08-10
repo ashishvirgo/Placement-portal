@@ -744,7 +744,7 @@ const handleSubmit = () => {
                   "https"
                 )
                   ? q.image
-                  : `${BACK_API}/${q.image.replace(
+                  : `${BACK_API}${q.image.replace(
                       /^\/+/,
                       ""
                     )}`
