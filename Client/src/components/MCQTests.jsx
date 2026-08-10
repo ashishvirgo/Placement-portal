@@ -83,7 +83,7 @@ const MCQTests = ({ navigate }) => {
           </h2>
 
           <p className="text-gray-500 mt-1">
-            View and attempt your assigned exams
+            View and attempt your Mock Tests
           </p>
         </div>
 
