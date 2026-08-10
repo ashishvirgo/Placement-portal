@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
-const API = "http://localhost:5002/api";
+const API = import.meta.env.VITE_BACKEND_API || "http://localhost:5002/api";
 
 const ViewSubjects = () => {
   const [subjects, setSubjects] = useState([]);
