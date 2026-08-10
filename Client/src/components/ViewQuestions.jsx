@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 
 const API = import.meta.env.VITE_BACKEND_API || "http://localhost:5002/api";
+const BACK_API = import.meta.env.VITE_BACK_API || "http://localhost:5002";
 
 const ViewQuestions = () => {
   const [subjects, setSubjects] = useState([]);
@@ -196,7 +197,7 @@ const ViewQuestions = () => {
 
                 {q.image && (
                   <img
-                    src={`http://localhost:5002${q.image}`}
+                    src={`${BACK_API}/${q.image}`}
                     className="max-h-60 mb-3 rounded"
                   />
                 )}
