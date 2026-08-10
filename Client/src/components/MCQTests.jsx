@@ -74,6 +74,24 @@ const MCQTests = ({ navigate }) => {
 
   return (
     <div className="min-h-screen bg-slate-50 dark:bg-slate-950 p-6">
+      {/* HEADER */}
+      <div className="flex flex-col md:flex-row justify-between md:items-center gap-4 mb-8">
+
+        <div>
+          <h2 className="text-3xl font-bold text-gray-800 dark:text-white">
+            Mock Tests
+          </h2>
+
+          <p className="text-gray-500 mt-1">
+            View and attempt your assigned exams
+          </p>
+        </div>
+
+        <div className="bg-blue-100 text-blue-700 px-5 py-2 rounded-xl font-semibold w-fit">
+          Total Tests: {tests.length}
+        </div>
+
+      </div>
       {/* LOADER */}
       {loading && (
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">

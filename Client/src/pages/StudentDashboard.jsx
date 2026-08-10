@@ -21,6 +21,7 @@ import PlacementDrive from "../components/PlacementDrive"
 import MyResume from "../components/MyResume"
 import StudentDashboard1 from "../components/StudentDashboard1";
 import MyApplications from "../components/MyApplications";
+import CodingPractice from "../components/CodingPractice";
 const StudentDashboard = () => {
   const navigate = useNavigate();
     const [collapsed, setCollapsed] = useState(false);
@@ -79,7 +80,8 @@ const StudentDashboard = () => {
 
       case "assigned":
         return <AssignedTests />;
-
+      case "coding":
+        return <CodingPractice />;
       case "resume":
         return <MyResume />;  
         
