@@ -9,7 +9,7 @@ import {
   FaUsers,
 } from "react-icons/fa";
 
-const API = import.meta.env.VITE_API_URL || "http://localhost:5002/api";
+const API = import.meta.env.VITE_BACKEND_API || "http://localhost:5002/api";
 
 const ViewUsers = () => {
   const [users, setUsers] = useState([]);
