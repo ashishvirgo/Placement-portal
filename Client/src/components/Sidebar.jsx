@@ -1,20 +1,23 @@
+
 import React from "react";
-import { useNavigate } from "react-router-dom";
 
 import {
   FiMenu,
   FiLogOut,
-  FiMoon,
-  FiSun,
   FiUser,
   FiLock,
-  FiCode,
+  FiFileText,
+  FiBriefcase,
   FiClipboard,
+  FiBookOpen,
+  FiCode,
   FiBarChart2,
+  FiCheckCircle,
+  FiAward,
+  FiMessageSquare,
 } from "react-icons/fi";
 
 import { MdOutlineQuiz } from "react-icons/md";
-
 import { HiOutlineAcademicCap } from "react-icons/hi";
 
 const Sidebar = ({
@@ -23,49 +26,74 @@ const Sidebar = ({
   activeTab,
   setActiveTab,
   student,
-  theme,
-  toggleTheme,
   handleLogout,
 }) => {
-  const navigate = useNavigate();
-
   const tabs = [
+    {
+      key: "dashboard",
+      label: "Dashboard",
+      icon: <FiUser size={20} />,
+    },
     {
       key: "profile",
       label: "My Profile",
       icon: <FiUser size={20} />,
     },
+
     {
       key: "resume",
       label: "My Resume",
-      icon: <FiUser size={20} />,
+      icon: <FiFileText size={20} />,
     },
+
     {
-      key: "Exam-Info",
-      label: "Exam Info",
-      icon: <MdOutlineQuiz size={20} />,
+      key: "drive",
+      label: "Placement Drives",
+      icon: <FiBriefcase size={20} />,
     },
-     {
-      key: "Chapter-wise-Syllabus",
-      label: "Chapter wise Syllabus",
-      icon: <MdOutlineQuiz size={20} />,
+
+    {
+      key: "applications",
+      label: "My Applications",
+      icon: <FiClipboard size={20} />,
     },
+
+    {
+      key: "Placement-Preparation",
+      label: "Placement Preparation",
+      icon: <HiOutlineAcademicCap size={22} />,
+    },
+
     {
       key: "test",
       label: "Mock Tests",
-      icon: <MdOutlineQuiz size={20} />,
+      icon: <MdOutlineQuiz size={22} />,
     },
+
+    {
+      key: "interview",
+      label: "AI Mock Interview",
+      icon: <FiMessageSquare size={20} />,
+    },
+
+    {
+      key: "coding",
+      label: "Coding Practice",
+      icon: <FiCode size={20} />,
+    },
+
     {
       key: "assigned",
       label: "Assigned Tests",
-      icon: <FiClipboard size={20} />,
+      icon: <FiCheckCircle size={20} />,
     },
+
     {
       key: "result",
       label: "Results",
       icon: <FiBarChart2 size={20} />,
     },
-    
+
     {
       key: "password",
       label: "Change Password",
@@ -81,171 +109,325 @@ const Sidebar = ({
         border-r border-gray-200 dark:border-slate-700
         shadow-xl
         transition-all duration-300
-        flex flex-col justify-between
+        flex flex-col
         h-screen
+        flex-shrink-0
       `}
     >
-      {/* Top Section */}
-      <div>
-        {/* Logo */}
-        <div className="p-5 border-b border-gray-200 dark:border-slate-700">
-          <div className="flex items-center justify-between">
-            {!collapsed && (
-              <div className="flex items-center gap-3">
-                <div className="h-12 w-12 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 flex items-center justify-center text-white shadow-lg">
-                  <HiOutlineAcademicCap size={26} />
-                </div>
+      {/* =====================================================
+          TOP SECTION
+      ===================================================== */}
 
-                <div>
-                  <h2 className="font-bold text-lg text-gray-800 dark:text-white">
-                    Student Placement Portal
-                  </h2>
+      <div className="flex-1 overflow-y-auto">
 
-                  <p className="text-xs text-gray-500">
-                    Training and Placement 
-                  </p>
-                </div>
+        {/* Logo / Header */}
+
+        <div
+          className={`
+            flex items-center
+            ${collapsed ? "justify-center" : "justify-between"}
+            px-4 py-5
+            border-b border-gray-200
+            dark:border-slate-700
+          `}
+        >
+
+          {!collapsed && (
+            <div className="flex items-center gap-3">
+
+              <div
+                className="
+                  w-11 h-11
+                  rounded-xl
+                  bg-gradient-to-r
+                  from-blue-600
+                  to-indigo-600
+                  text-white
+                  flex items-center
+                  justify-center
+                  shadow-lg
+                "
+              >
+                <FiBriefcase size={23} />
               </div>
-            )}
 
-            <button
-              onClick={() => setCollapsed(!collapsed)}
-              className="
-                p-2 rounded-lg
-                hover:bg-gray-100
-                dark:hover:bg-slate-800
-                text-gray-600
-                dark:text-gray-300
-              "
-            >
-              <FiMenu size={22} />
-            </button>
-          </div>
+              <div>
+
+                <h2
+                  className="
+                    font-bold
+                    text-lg
+                    text-gray-800
+                    dark:text-white
+                  "
+                >
+                  Student Placement Portal
+                </h2>
+
+                <p className="text-xs text-gray-500 dark:text-gray-400">
+                  Training & Placement
+                </p>
+
+              </div>
+
+            </div>
+          )}
+
+          {/* Collapse Button */}
+
+          <button
+            onClick={() =>
+              setCollapsed(!collapsed)
+            }
+            className="
+              p-2
+              rounded-lg
+              hover:bg-gray-100
+              dark:hover:bg-slate-800
+              text-gray-600
+              dark:text-gray-300
+              transition
+            "
+            title={
+              collapsed
+                ? "Expand Sidebar"
+                : "Collapse Sidebar"
+            }
+          >
+            <FiMenu size={22} />
+          </button>
+
         </div>
 
-        {/* Student Info */}
+        {/* =====================================================
+            STUDENT INFORMATION
+        ===================================================== */}
+
         {!collapsed && (
-          <div className="mx-4 mt-5 mb-6 p-4 rounded-2xl bg-gradient-to-r from-blue-600 to-indigo-600 text-white">
+          <div
+            className="
+              mx-4
+              mt-5
+              mb-6
+              p-4
+              rounded-2xl
+              bg-gradient-to-r
+              from-blue-600
+              to-indigo-600
+              text-white
+              shadow-lg
+            "
+          >
+
             <div className="flex items-center gap-3">
-              <div className="h-12 w-12 rounded-full bg-white/20 flex items-center justify-center">
+
+              {/* Avatar */}
+
+              <div
+                className="
+                  h-12
+                  w-12
+                  rounded-full
+                  bg-white/20
+                  backdrop-blur-sm
+                  flex
+                  items-center
+                  justify-center
+                  flex-shrink-0
+                "
+              >
                 <FiUser size={22} />
               </div>
 
+              {/* Student */}
+
               <div className="overflow-hidden">
+
                 <h3 className="font-semibold truncate">
-                  {student?.name}
+                  {student?.name || "Student"}
                 </h3>
 
                 <p className="text-xs text-blue-100 truncate">
-                  {student?.email}
+                  {student?.email || ""}
                 </p>
+
+                {student?.userId && (
+                  <p className="text-xs text-blue-200 mt-1">
+                    ID: {student.userId}
+                  </p>
+                )}
+
               </div>
+
             </div>
+
           </div>
         )}
 
-        {/* Menu */}
+        {/* =====================================================
+            PLACEMENT MENU
+        ===================================================== */}
+
         <nav className="px-3">
-          <ul className="space-y-2">
+
+          {!collapsed && (
+            <p
+              className="
+                px-3
+                mb-3
+                text-xs
+                font-semibold
+                uppercase
+                tracking-wider
+                text-gray-400
+                dark:text-gray-500
+              "
+            >
+              Placement
+            </p>
+          )}
+
+          <ul className="space-y-1">
+
             {tabs.map((tab) => (
+
               <li key={tab.key}>
+
                 <button
-                  onClick={() => setActiveTab(tab.key)}
+                  onClick={() =>
+                    setActiveTab(tab.key)
+                  }
+                  title={
+                    collapsed
+                      ? tab.label
+                      : ""
+                  }
                   className={`
-                    w-full flex items-center
-                    ${collapsed ? "justify-center" : "gap-3"}
-                    px-4 py-3 rounded-xl
-                    transition-all duration-200
+                    w-full
+                    flex
+                    items-center
+                    ${
+                      collapsed
+                        ? "justify-center"
+                        : "gap-3"
+                    }
+                    px-4
+                    py-3
+                    rounded-xl
+                    transition-all
+                    duration-200
                     font-medium
 
                     ${
                       activeTab === tab.key
-                        ? "bg-gradient-to-r from-blue-600 to-indigo-600 text-white shadow-lg"
-                        : "text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-slate-800"
+                        ? `
+                          bg-gradient-to-r
+                          from-blue-600
+                          to-indigo-600
+                          text-white
+                          shadow-lg
+                        `
+                        : `
+                          text-gray-700
+                          dark:text-gray-300
+                          hover:bg-gray-100
+                          dark:hover:bg-slate-800
+                        `
                     }
                   `}
                 >
-                  {tab.icon}
+
+                  {/* Icon */}
+
+                  <span
+                    className={`
+                      flex-shrink-0
+                      ${
+                        activeTab ===
+                        tab.key
+                          ? "text-white"
+                          : "text-gray-500 dark:text-gray-400"
+                      }
+                    `}
+                  >
+                    {tab.icon}
+                  </span>
+
+                  {/* Label */}
 
                   {!collapsed && (
-                    <span>{tab.label}</span>
+                    <span className="truncate">
+                      {tab.label}
+                    </span>
                   )}
+
                 </button>
+
               </li>
+
             ))}
 
-            {/* Coding Test */}
-            <li>
-              <button
-                onClick={() => navigate("/coding")}
-                className="
-                  w-full flex items-center
-                  gap-3 px-4 py-3 rounded-xl
-                  text-gray-700 dark:text-gray-300
-                  hover:bg-gray-100 dark:hover:bg-slate-800
-                  transition-all
-                "
-              >
-                <FiCode size={20} />
-
-                {!collapsed && (
-                  <span>Coding Test</span>
-                )}
-              </button>
-            </li>
           </ul>
+
         </nav>
+
       </div>
 
-      {/* Bottom Actions */}
-      <div className="p-4 border-t border-gray-200 dark:border-slate-700 space-y-3">
-        {/* Theme Toggle */}
-        <button
-          onClick={toggleTheme}
-          className="
-            w-full flex items-center
-            justify-center gap-3
-            px-4 py-3 rounded-xl
-            bg-gray-100 dark:bg-slate-800
-            hover:bg-gray-200 dark:hover:bg-slate-700
-            transition-all
-            text-gray-700 dark:text-gray-300
-          "
-        >
-          {theme === "light" ? (
-            <FiMoon size={20} />
-          ) : (
-            <FiSun size={20} />
-          )}
+      {/* =====================================================
+          BOTTOM SECTION
+      ===================================================== */}
 
-          {!collapsed && (
-            <span>
-              {theme === "light"
-                ? "Dark Mode"
-                : "Light Mode"}
-            </span>
-          )}
-        </button>
+      <div
+        className="
+          p-4
+          border-t
+          border-gray-200
+          dark:border-slate-700
+        "
+      >
+
+       
 
         {/* Logout */}
+
         <button
           onClick={handleLogout}
+          title={
+            collapsed
+              ? "Logout"
+              : ""
+          }
           className="
-            w-full flex items-center
-            justify-center gap-3
-            px-4 py-3 rounded-xl
-            bg-red-500 hover:bg-red-600
-            text-white font-medium
-            transition-all shadow-lg
+            w-full
+            flex
+            items-center
+            justify-center
+            gap-3
+            px-4
+            py-3
+            rounded-xl
+            bg-red-500
+            hover:bg-red-600
+            text-white
+            font-medium
+            transition-all
+            shadow-lg
           "
         >
+
           <FiLogOut size={20} />
 
-          {!collapsed && <span>Logout</span>}
+          {!collapsed && (
+            <span>Logout</span>
+          )}
+
         </button>
+
       </div>
+
     </aside>
   );
 };
 
 export default Sidebar;
+

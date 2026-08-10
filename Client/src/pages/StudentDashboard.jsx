@@ -15,9 +15,12 @@ import AssignedTests from "../components/AssignedTests";
 import Results from "../components/Results";
 import Profile from "../components/Profile";
 import ChangePassword from "../components/ChangePassword";
-import ExamInfoPage from "./ExamInfoPage";
-import ChapterWiseSyllabusViewer from "./ChapterWiseSyllabusViewer";
-
+import PlacementPreparation from "./PlacementPreparation";
+import AIInterview from "../components/AIInterview";
+import PlacementDrive from "../components/PlacementDrive"
+import MyResume from "../components/MyResume"
+import StudentDashboard1 from "../components/StudentDashboard1";
+import MyApplications from "../components/MyApplications";
 const StudentDashboard = () => {
   const navigate = useNavigate();
     const [collapsed, setCollapsed] = useState(false);
@@ -65,15 +68,26 @@ const StudentDashboard = () => {
 
   const renderTab = () => {
     switch (activeTab) {
-      case "Exam-Info":
-        return <ExamInfoPage />;
-      case "Chapter-wise-Syllabus":
-        return <ChapterWiseSyllabusViewer />;
+      case "dashboard":
+        return <StudentDashboard1/>;
+      case "applications":
+        return <MyApplications/>;
+      case "Placement-Preparation":
+        return <PlacementPreparation/>;
       case "test":
         return <MCQTests navigate={navigate} />;
 
       case "assigned":
         return <AssignedTests />;
+
+      case "resume":
+        return <MyResume />;  
+        
+      case "interview":
+        return <AIInterview />;
+
+      case "drive":
+        return <PlacementDrive />;
 
       case "result":
         return <Results />;
@@ -155,7 +169,7 @@ const StudentDashboard = () => {
         </div> */}
 
         {/* Info Cards */}
-        {/* <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
           
           <div className="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg border border-gray-100 dark:border-gray-700 hover:shadow-xl transition">
             <div className="flex items-center gap-4">
@@ -209,10 +223,10 @@ const StudentDashboard = () => {
               </div>
             </div>
           </div>
-        </div> */}
+        </div>
 
         {/* Quick Actions Header */}
-        <div className="flex items-center gap-3 mb-6">
+        {/* <div className="flex items-center gap-3 mb-6">
           <FiBookOpen className="text-blue-600 text-2xl" />
 
           <h2 className="text-2xl font-bold text-gray-800 dark:text-white">
@@ -220,7 +234,7 @@ const StudentDashboard = () => {
           </h2>
 
           <FiAward className="text-yellow-500 text-2xl" />
-        </div>
+        </div> */}
 
         {/* Dynamic Content */}
         <div className="bg-white dark:bg-gray-800 rounded-3xl shadow-xl p-5 lg:p-8 border border-gray-100 dark:border-gray-700">
