@@ -108,7 +108,7 @@ const AdminSidebar = ({
         {!collapsed && (
           <div>
             <h2 className="text-white font-bold text-lg">
-              Exam Portal
+              Placement Portal
             </h2>
             <p className="text-xs text-slate-400">
               Administration

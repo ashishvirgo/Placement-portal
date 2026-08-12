@@ -169,7 +169,9 @@ const CreateUser = () => {
                 <option value="">Select Role</option>
                 <option value="student">Student</option>
                 <option value="teacher">Teacher</option>
-                <option value="admin">Admin</option>
+                <option value="placementcoordinator">Placement Coordinator</option>
+                <option value="tpo">TPO</option>
+                <option value="recruiter">Recruiter</option>
               </select>
             </div>
           </div>

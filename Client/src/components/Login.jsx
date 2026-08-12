@@ -46,6 +46,9 @@ const Login = () => {
 
       if (role === "admin") navigate("/admin");
       else if (role === "teacher") navigate("/teacher");
+      else if (role === "tpo") navigate("/tpo");
+      else if (role === "recruiter") navigate("/recruiter");
+      else if (role === "placement-coordinator") navigate("/placement-coordinator");
       else navigate("/student");
     } catch (err) {
       setError(err.response?.data?.message || "Login failed");
