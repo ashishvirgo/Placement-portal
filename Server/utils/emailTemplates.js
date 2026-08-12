@@ -15,13 +15,13 @@ export const accountCreatedTemplate = ({
   <div style="max-width: 600px; margin: auto; background: #ffffff; padding: 30px; border-radius: 8px;">
     
     <h2 style="color: #1e40af;">
-      Examination System Account Created
+      Smart Placement Portal Account Created
     </h2>
 
     <p>Dear <strong>${name}</strong>,</p>
 
     <p>
-      Your account has been successfully created in the Examination Management System.
+      Your account has been successfully created in the Smart Placement Portal.
     </p>
 
     <table style="border-collapse: collapse; width: 100%; margin: 20px 0;">
@@ -60,13 +60,13 @@ export const accountCreatedTemplate = ({
     </div>
 
     <p>
-      If you did not expect this account, please contact the Examination Cell immediately.
+      If you did not expect this account, please contact the Placement Cell immediately.
     </p>
 
     <hr />
 
     <p style="font-size: 12px; color: #666;">
-      Examination Management System<br/>
+      Smart Placement Portal<br/>
       ABES Engineering College
     </p>
 

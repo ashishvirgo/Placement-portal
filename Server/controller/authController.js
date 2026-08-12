@@ -114,7 +114,7 @@ export const forgotPassword= async (req, res) => {
       await sendMail({
         to: user.email,
         subject:
-          "Examination System Account Reset Link",
+          "Smart Placement Portal Account Reset Link",
         html: accountPasswordResetTemplate({
           name: user.name,
           resetLink
@@ -202,7 +202,7 @@ export const sendEmailOtp = async (req, res) => {
       subject: "Email Verification OTP",
       html: `
         <div style="font-family:Arial">
-          <h2>Smart Exam Portal</h2>
+          <h2>Smart Placement Portal</h2>
           <p>Your OTP is:</p>
           <h1>${otp}</h1>
           <p>Valid for 5 minutes.</p>
@@ -295,7 +295,7 @@ export const register = async (req, res) => {
       await sendMail({
         to: user.email,
         subject:
-          "Examination System Account Created",
+          "Smart Placement Portal Account Created",
         html: accountCreatedTemplate({
           name: user.name,
           username: user.email,

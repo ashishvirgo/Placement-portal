@@ -123,7 +123,7 @@ export const bulkUploadUsers = async (req, res) => {
       await sendMail({
         to: user.email,
         subject:
-          "Examination System Account Created",
+          "Smart Placement Portal Account Created",
         html: accountCreatedTemplate({
           name: user.name,
           username: user.email,
@@ -188,7 +188,7 @@ const createUser=async(req,res)=>{
       await sendMail({
         to: user.email,
         subject:
-          "Examination System Account Created",
+          "Smart Placement Portal Account Created",
         html: accountCreatedTemplate({
           name: user.name,
           username: user.email,
