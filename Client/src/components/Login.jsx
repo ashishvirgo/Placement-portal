@@ -64,27 +64,18 @@ const Login = () => {
 
         <div className="relative z-10 flex flex-col justify-center px-16">
 
-          <div className="flex items-center gap-3 mb-6">
-            <img
-              src={logo}
-              className="w-14 h-14 bg-white rounded-lg p-1"
-            />
-            <h1 className="text-xl font-bold">
-              ABES Engineering College
-            </h1>
-          </div>
+          
 
-          <h2 className="text-3xl font-bold leading-snug">
+          <h1 className="text-5xl font-bold leading-snug">
             Smart Placement Prepration Portal
-          </h2>
+          </h1>
 
-          <p className="mt-4 text-blue-100 text-sm">
-            Secure role-based access for Students, Teachers & Admins with
-            modern online placement system.
+          <p className="mt-4 text-blue-100 text-xl">
+            A secure, intelligent, and role-based placement preparation platform designed to connect Students, Teachers, Placement Coordinators, Recruiters, and Administrators through a modern digital ecosystem.
           </p>
 
           {/* Features */}
-          <div className="mt-8 space-y-3 text-sm text-blue-100">
+          <div className="mt-8 space-y-3 text-xl text-blue-100">
 
             <div className="flex items-center gap-2">
               <FiShield />
@@ -93,12 +84,36 @@ const Login = () => {
 
             <div className="flex items-center gap-2">
               <FiBookOpen />
-              Online Exam Management
+              Placement Drive Management
             </div>
 
             <div className="flex items-center gap-2">
               <FiCheckCircle />
-              Instant Result Evaluation
+              Placement Readiness Index (PRI)
+            </div>
+            <div className="flex items-center gap-2">
+              <FiCheckCircle />
+              Student Placement Profile
+            </div>
+            <div className="flex items-center gap-2">
+              <FiCheckCircle />
+              AI-Powered Mock Interview
+            </div>
+            <div className="flex items-center gap-2">
+              <FiCheckCircle />
+              Mock Tests & Assessments
+            </div>
+            <div className="flex items-center gap-2">
+              <FiCheckCircle />
+              ATS Resume Analysis
+            </div>
+            <div className="flex items-center gap-2">
+              <FiCheckCircle />
+              Coding Practice
+            </div>
+            <div className="flex items-center gap-2">
+              <FiCheckCircle />
+              Performance Analytics
             </div>
           </div>
         </div>
@@ -111,6 +126,21 @@ const Login = () => {
 
           {/* Header */}
           <div className="text-center mb-6">
+           
+  <div className="flex justify-center mb-4">
+    <img
+      src={logo}
+      alt="ABES Engineering College Logo"
+      className="w-45 h-15 bg-white rounded-xl object-contain"
+    />
+  </div>
+
+  <h1 className="text-3xl lg:text-3xl font-extrabold tracking-tight">
+    ABES Engineering College
+  </h1>
+
+  
+
             <div className="flex justify-center mb-3">
               <FiUser className="text-blue-600 text-4xl" />
             </div>
