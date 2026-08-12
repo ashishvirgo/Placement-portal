@@ -66,7 +66,7 @@ const Login = () => {
 
           
 
-          <h1 className="text-5xl font-bold leading-snug">
+          <h1 className="text-4xl font-bold leading-snug">
             Smart Placement Prepration Portal
           </h1>
 

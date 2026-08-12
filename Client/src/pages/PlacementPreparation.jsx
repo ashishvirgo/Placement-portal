@@ -431,112 +431,6 @@ const placementData = {
     ],
   },
 
-  IT: {
-    Common: [
-      {
-        topic: "Quantitative Aptitude",
-        category: "Aptitude",
-        level: "Basic → Advanced",
-        questions: 500,
-        difficulty: "Medium",
-        progress: 55,
-      },
-      {
-        topic: "Logical Reasoning",
-        category: "Reasoning",
-        level: "Basic → Advanced",
-        questions: 400,
-        difficulty: "Medium",
-        progress: 45,
-      },
-      {
-        topic: "Verbal Ability",
-        category: "Communication",
-        level: "Basic → Advanced",
-        questions: 300,
-        difficulty: "Medium",
-        progress: 60,
-      },
-    ],
-
-    Technical: [
-      {
-        topic: "Java Programming",
-        category: "Programming",
-        level: "Intermediate → Advanced",
-        questions: 350,
-        difficulty: "Medium",
-        progress: 60,
-      },
-      {
-        topic: "Data Structures & Algorithms",
-        category: "DSA",
-        level: "Intermediate → Advanced",
-        questions: 450,
-        difficulty: "Hard",
-        progress: 45,
-      },
-      {
-        topic: "DBMS & SQL",
-        category: "Database",
-        level: "Intermediate",
-        questions: 300,
-        difficulty: "Medium",
-        progress: 55,
-      },
-      {
-        topic: "Operating Systems",
-        category: "Core IT",
-        level: "Intermediate",
-        questions: 250,
-        difficulty: "Medium",
-        progress: 40,
-      },
-      {
-        topic: "Computer Networks",
-        category: "Networking",
-        level: "Intermediate",
-        questions: 220,
-        difficulty: "Medium",
-        progress: 35,
-      },
-      {
-        topic: "Cloud Computing",
-        category: "Cloud",
-        level: "Intermediate",
-        questions: 180,
-        difficulty: "Medium",
-        progress: 30,
-      },
-    ],
-
-    Development: [
-      {
-        topic: "Java Spring Boot",
-        category: "Backend",
-        level: "Intermediate → Advanced",
-        questions: 180,
-        difficulty: "Hard",
-        progress: 40,
-      },
-      {
-        topic: "React.js",
-        category: "Frontend",
-        level: "Intermediate",
-        questions: 180,
-        difficulty: "Medium",
-        progress: 45,
-      },
-      {
-        topic: "REST APIs",
-        category: "Backend",
-        level: "Intermediate",
-        questions: 150,
-        difficulty: "Medium",
-        progress: 50,
-      },
-    ],
-  },
 
   ECE: {
     Common: [
@@ -850,124 +744,16 @@ const placementData = {
       },
     ],
   },
-
-  Civil: {
-    Common: [
-      {
-        topic: "Quantitative Aptitude",
-        category: "Aptitude",
-        level: "Basic → Advanced",
-        questions: 500,
-        difficulty: "Medium",
-        progress: 50,
-      },
-      {
-        topic: "Logical Reasoning",
-        category: "Reasoning",
-        level: "Basic → Advanced",
-        questions: 400,
-        difficulty: "Medium",
-        progress: 45,
-      },
-      {
-        topic: "Verbal Ability",
-        category: "Communication",
-        level: "Basic → Advanced",
-        questions: 300,
-        difficulty: "Medium",
-        progress: 55,
-      },
-    ],
-
-    Technical: [
-      {
-        topic: "Structural Analysis",
-        category: "Civil Engineering",
-        level: "Intermediate",
-        questions: 250,
-        difficulty: "Hard",
-        progress: 40,
-      },
-      {
-        topic: "Concrete Technology",
-        category: "Construction",
-        level: "Intermediate",
-        questions: 220,
-        difficulty: "Medium",
-        progress: 45,
-      },
-      {
-        topic: "Geotechnical Engineering",
-        category: "Civil Engineering",
-        level: "Intermediate",
-        questions: 220,
-        difficulty: "Hard",
-        progress: 35,
-      },
-      {
-        topic: "Transportation Engineering",
-        category: "Civil Engineering",
-        level: "Intermediate",
-        questions: 180,
-        difficulty: "Medium",
-        progress: 40,
-      },
-      {
-        topic: "Environmental Engineering",
-        category: "Civil Engineering",
-        level: "Intermediate",
-        questions: 180,
-        difficulty: "Medium",
-        progress: 45,
-      },
-      {
-        topic: "Surveying",
-        category: "Civil Engineering",
-        level: "Intermediate",
-        questions: 180,
-        difficulty: "Medium",
-        progress: 50,
-      },
-    ],
-
-    Development: [
-      {
-        topic: "AutoCAD Civil",
-        category: "Design",
-        level: "Intermediate",
-        questions: 120,
-        difficulty: "Medium",
-        progress: 45,
-      },
-      {
-        topic: "STAAD Pro",
-        category: "Structural Design",
-        level: "Advanced",
-        questions: 120,
-        difficulty: "Hard",
-        progress: 30,
-      },
-      {
-        topic: "Revit",
-        category: "BIM",
-        level: "Intermediate",
-        questions: 100,
-        difficulty: "Medium",
-        progress: 30,
-      },
-    ],
-  },
 };
 
 const branchIcons = {
   CSE: <FiCode />,
   "CSE-AIML": <FiCpu />,
   "CSE-DS": <FiDatabase />,
-  IT: <FiLayers />,
   ECE: <FiActivity />,
   EEE: <FiZap />,
   Mechanical: <FiTarget />,
-  Civil: <FiHome />,
+  
 };
 
 const PlacementPreparation = () => {

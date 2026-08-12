@@ -80,19 +80,6 @@ const AIInterview = ({ student }) => {
       "Node.js",
       "MERN Stack",
     ],
-
-    "Information Technology": [
-      "Data Structures",
-      "DBMS",
-      "Operating Systems",
-      "Computer Networks",
-      "Web Development",
-      "Cloud Computing",
-      "Java",
-      "Python",
-      "JavaScript",
-    ],
-
     "CSE-AIML": [
       "Python",
       "Machine Learning",
@@ -145,24 +132,9 @@ const AIInterview = ({ student }) => {
       "CAD/CAM",
     ],
 
-    "Civil Engineering": [
-      "Structural Engineering",
-      "Concrete Technology",
-      "Geotechnical Engineering",
-      "Surveying",
-      "Transportation Engineering",
-      "Environmental Engineering",
-      "Construction Management",
-    ],
+    
 
-    "Chemical Engineering": [
-      "Mass Transfer",
-      "Heat Transfer",
-      "Fluid Mechanics",
-      "Reaction Engineering",
-      "Process Control",
-      "Thermodynamics",
-    ],
+    
   };
 
   /* =====================================================
@@ -178,15 +150,6 @@ const AIInterview = ({ student }) => {
         "What is the time complexity of binary search?",
         "Explain OOP concepts with real-world examples.",
       ],
-
-      "Information Technology": [
-        "Explain REST API and its advantages.",
-        "What is cloud computing?",
-        "Explain authentication versus authorization.",
-        "What is a database index?",
-        "Explain MVC architecture.",
-      ],
-
       "CSE-AIML": [
         "What is overfitting in machine learning and how can you prevent it?",
         "Explain supervised and unsupervised learning.",
@@ -226,22 +189,7 @@ const AIInterview = ({ student }) => {
         "What is CNC machining?",
         "Explain heat transfer mechanisms.",
       ],
-
-      "Civil Engineering": [
-        "What is the difference between cement and concrete?",
-        "Explain the purpose of reinforcement in RCC.",
-        "What is soil bearing capacity?",
-        "Explain different types of foundations.",
-        "What is surveying?",
-      ],
-
-      "Chemical Engineering": [
-        "Explain absorption and adsorption.",
-        "What is a distillation column?",
-        "Explain heat exchanger operation.",
-        "What is chemical reaction engineering?",
-        "Explain mass transfer.",
-      ],
+     
     },
 
     HR: [
